@@ -49,23 +49,6 @@ void List_add_cabeca(List *L, int val) {
 	L->begin = p;
 }
 
-void List_destroy(List **L_ref) {
-	//puts("Destruido");
-	List *L = *L_ref;
-
-	node *p = L->begin;
-	node *aux = NULL;
-
-	while(p != NULL) {
-		aux = p;
-		p = p->next;
-		free(aux);
-	}
-	free(L);
-
-	*L_ref = NULL;
-}
-
 int busca_lista(List *L, int valor){
     
     node *aux = L->begin;
@@ -147,17 +130,6 @@ SNode *inserir_node(SNode *raiz,long int valor){
         
         return raiz;
     }
-}
-
-void destroy_arv(SNode *arv){
-    if(arv == NULL){
-        return;
-    }
-    
-    destroy_arv(arv->esq);
-    destroy_arv(arv->dir);
-    
-    free(arv);
 }
 
 
