@@ -1,7 +1,7 @@
 # ProjetosED
 ## Projetos finais para a disciplina de estrutura de dados
 
-Autores: Flávia Mirelly - Giovanna Azevedo - Vinicius Santana
+Autores: Flávia Mirelly - @[Giovanna Azevedo](https://github.com/giovannaspace) - @[Vinicius Santana](https://github.com/Vini-SantMa)
 
 Curso de Engenharia de Computação - UFAL campus Maceió
 
