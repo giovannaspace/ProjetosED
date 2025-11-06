@@ -1,0 +1,6 @@
+c Arquivo de teste SAT
+c Formula: (-1) ^ (2)
+p cnf 3 2
+-1 -2 -3 0
+-1 -2 -3 0
+
