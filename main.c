@@ -7,20 +7,6 @@ int main()
     FILE *arquivo_recebido = NULL;
     char nome_arquivo[1000];
 
-    //tirei: unsigned char nome_arquivo[] = "arquivo_teste.jpeg";
-    /* ANTES ERA ASSIM:
-    arquivo_recebido = Abrir(nome_arquivo);
-    //...
-    unsigned char* dados_arquivo = ler_arquivo(arquivo_recebido); // !! PROBLEMA DE MEMÓRIA !!
-    printf("Arquivo aberto com sucesso!\n");
-    //...
-    preenche_tab_frequencia(nome_arquivo,tabela_frequencia);
-    //...
-    uint64_t total_bits = calcular_quantidade_bits(dicionario,dados_arquivo,arquivo_recebido); // Passava o buffer da RAM
-    //...
-    escrever_huffman(nome_arquivo,"teste_compactado.huff",cabecalho,string_arvore,tamanho_arvore,dicionario);
-*/
-    
     
     arquivo_recebido = Abrir(nome_arquivo);
 
@@ -63,12 +49,7 @@ int main()
 
     int quant_lixo = calcular_lixo(total_bits);
 
-    //nao precisa do (char*) antes de calloc pois em C, ja converte automaticamente pra char* 
-    //aloca espaço de tamanho_arvore para fazer a string da arvore
     char *string_arvore = calloc(tamanho_arvore,sizeof(char));
-
-    //MUDOU A CHAMADA DA FUNCAO, PRA PASSAR ESSE INDICE !!!!!!!
-
     int indice_arvore = 0; 
     percorrer_arvore_pre_ordem(arvore, string_arvore, &indice_arvore); 
 
